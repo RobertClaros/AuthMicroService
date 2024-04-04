@@ -4,6 +4,7 @@
   "description": "",
   "main": "auhtApp.js",
   "scripts": {
+    "start": "nodemon --exec \"eslint . && node\" auhtApp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
   }
 }

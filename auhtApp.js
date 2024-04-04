@@ -6,7 +6,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const secretKey = 'mySecretKey';
-const users = [];
+
 
 app.use(express.json());
 
@@ -95,8 +95,8 @@ const authenticateToken = (req, res, next) => {
 
 app.post('/register', registerUser);
 app.post('/login', loginUser);
-app.get('/protected', authenticateToken, (req, res) => {
-  res.json({ message: 'Route protected', user: req.user });
+app.get('/validated', authenticateToken, (req, res) => {
+  res.json({ message: 'Route validated', user: req.user });
 });
 
 app.listen(PORT, () => {
