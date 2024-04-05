@@ -25,7 +25,6 @@ connectToMongoDB();
 
 const registerUser = async (username, password) => {
   try {
-    // Verificar si el nombre de usuario contiene caracteres especiales
     const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/;
     if (specialCharacters.test(username)) {
       throw new Error('Invalid username');
@@ -43,7 +42,6 @@ const registerUser = async (username, password) => {
     return { success: true, message: 'Registration successful' };
   } catch (error) {
     console.error(error);
-    // Devolver el mensaje de error específico en caso de nombre de usuario inválido
     if (error.message === 'Invalid username') {
       return { success: false, message: 'Invalid username' };
     }
