@@ -1,4 +1,4 @@
-const { client } = require('./auth');
+const { client } = require('./auht');
 
 async function cleanup() {
   try {
