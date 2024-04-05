@@ -11,15 +11,6 @@ const client = new MongoClient(uri, {
   }
 });
 
-const connectToMongoDB = async () => {
-  try {
-    await client.connect();
-    console.log("Connected to MongoDB Atlas");
-  } catch (error) {
-    console.error("Error connecting to MongoDB Atlas", error);
-    process.exit(1);
-  }
-};
 
 // Función para cerrar la conexión a MongoDB
 const closeMongoDBConnection = async () => {
