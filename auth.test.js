@@ -1,6 +1,4 @@
-/* global client */
-
-const { registerUser, client } = require('./auht');
+const { registerUser } = require('./auht');
 
 afterAll(async () => {
   // Cerrar la conexión a MongoDB después de que todas las pruebas hayan finalizado
