@@ -1,10 +1,9 @@
 name: github-actions
-name: jest-test
 
 on:
   push:
     branches:
-      - authApp-linter
+      - authApp-tests
 
 jobs:
   test:
