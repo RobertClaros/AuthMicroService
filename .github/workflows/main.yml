@@ -22,6 +22,4 @@ jobs:
     - name: Run Jest tests
       run: npx jest
 
-    - name: Cleanup
-      run: npm run cleanup
     
