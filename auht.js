@@ -81,4 +81,4 @@ const authenticateToken = async (token) => {
   }
 };
 
-module.exports = { registerUser, loginUser, authenticateToken };
+module.exports = { registerUser, loginUser, authenticateToken, client };

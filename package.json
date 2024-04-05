@@ -5,7 +5,8 @@
   "main": "auhtApp.js",
   "scripts": {
     "start": "nodemon --exec \"eslint . && node\" auhtApp.js",
-    "test": "jest --runInBand --detectOpenHandles"
+    "test": "jest --runInBand --detectOpenHandles",
+    "cleanup": "node cleanup.js" 
   },
   "keywords": [],
   "author": "",
