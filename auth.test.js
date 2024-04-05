@@ -7,4 +7,3 @@ describe('registerUser function', () => {
     expect(result.message).toBe('Invalid username');
   });
 });
-

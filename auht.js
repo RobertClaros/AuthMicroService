@@ -21,7 +21,16 @@ const connectToMongoDB = async () => {
   }
 };
 
-connectToMongoDB();
+// Función para cerrar la conexión a MongoDB
+const closeMongoDBConnection = async () => {
+  try {
+    await client.close();
+    console.log("Connection to MongoDB Atlas closed");
+  } catch (error) {
+    console.error("Error closing connection to MongoDB Atlas", error);
+    process.exit(1);
+  }
+};
 
 const registerUser = async (username, password) => {
   try {
@@ -81,4 +90,7 @@ const authenticateToken = async (token) => {
   }
 };
 
-module.exports = { registerUser, loginUser, authenticateToken, client };
+module.exports = { registerUser, loginUser, authenticateToken };
+
+// Cierra la conexión a MongoDB después de la ejecución del código
+closeMongoDBConnection();
