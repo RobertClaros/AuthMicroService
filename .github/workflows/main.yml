@@ -6,7 +6,7 @@ on:
       - authApp-tests
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     
     steps:
@@ -19,7 +19,15 @@ jobs:
     - name: Run eslint
       run: npx eslint .
 
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
     - name: Run Jest tests
       run: npx jest
-
-    
