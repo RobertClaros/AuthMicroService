@@ -11,8 +11,6 @@ const client = new MongoClient(uri, {
   }
 });
 
-
-// Función para cerrar la conexión a MongoDB
 const closeMongoDBConnection = async () => {
   try {
     await client.close();
@@ -83,5 +81,4 @@ const authenticateToken = async (token) => {
 
 module.exports = { registerUser, loginUser, authenticateToken };
 
-// Cierra la conexión a MongoDB después de la ejecución del código
 closeMongoDBConnection();
